@@ -43,10 +43,12 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
         a: {
           '&:hover': {
             backgroundColor: `${colors.primary[800]} !important`,
+            color: '#6870fa !important',
+            transform: `scale(1.2)`,
           },
         },
         [`.${menuClasses.active}`]: {
-          backgroundColor: `${colors.primary[800]} !important`,
+          color: '#868dfb !important',
         },
       }}
       component={<Link to={to} />}
@@ -60,6 +62,7 @@ const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  // page selection
   const [selected, setSelected] = useState('Dashboard');
 
   return (
@@ -78,8 +81,11 @@ const Sidebar = () => {
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            icon={isCollapsed ? <MenuOutlined /> : undefined}
+            icon={
+              isCollapsed ? (
+                <MenuOutlined onClick={() => setIsCollapsed(!isCollapsed)} />
+              ) : undefined
+            }
             rootStyles={{
               margin: '10px 0 20px 0',
 
