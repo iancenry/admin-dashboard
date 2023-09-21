@@ -88,6 +88,7 @@ const Team = () => {
             backgroundColor: colors.blueAccent[700],
             borderBottom: 'none',
           },
+          //middle section
           '& .MuiDataGrid-virtualScroller': {
             backgroundColor: colors.primary[400],
           },
