@@ -1,3 +1,4 @@
 import Header from './Header';
+import BarChart from './BarChart';
 
-export { Header };
+export { Header, BarChart };
