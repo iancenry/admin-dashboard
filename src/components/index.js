@@ -4,6 +4,7 @@ import PieChart from './PieChart';
 import LineChart from './LineChart';
 import GeographyChart from './GeographyChart';
 import ProgressCircle from './ProgressCircle';
+import StatBox from './StatBox';
 
 export {
   Header,
@@ -12,4 +13,5 @@ export {
   LineChart,
   GeographyChart,
   ProgressCircle,
+  StatBox,
 };
